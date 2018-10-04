@@ -1,8 +1,8 @@
-var VideoList = (props) => {
+const VideoList = (props) => {
   return (
     <div className="video-list media">
       {props.videos.map((data, index) =>
-        <VideoListEntry data={data} key={index}/>
+        <VideoListEntry video={data} key={index}/>
       )}
     </div>
   );
