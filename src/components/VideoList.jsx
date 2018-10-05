@@ -2,7 +2,7 @@ const VideoList = (props) => {
   return (
     <div className="video-list media">
       {props.videos.map((data, index) =>
-        <VideoListEntry video={data} key={index}/>
+        <VideoListEntry video={data} id={index} key={index}/>
       )}
     </div>
   );
