@@ -8,7 +8,7 @@ class App extends React.Component {
     };
 
     this.state = {
-      currentVideo: window.exampleVideoData[0],
+      currentVideo: window.exampleVideoData[1],
       videoList: [],
     };
 
@@ -23,10 +23,6 @@ class App extends React.Component {
   changeVideo(video) {
     this.setState({currentVideo: video});
   }
-
-  // searchVideo(videos) {
-  //   this.setState({videoList: videos});
-  // }
 
   searchVideo(event) {
     this.options.query = event.target.value;
@@ -48,7 +44,7 @@ class App extends React.Component {
           </div>
           <div className="col-md-5">
             <VideoList videos={this.state.videoList}
-              onClick={this.changeVideo.bind(this)}/>
+              play={this.changeVideo.bind(this)}/>
           </div>
         </div>
       </div>
